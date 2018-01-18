@@ -1,0 +1,27 @@
+Model checking: P=? [ F d2=0 ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 91 iterations in 0.05 seconds (average 0.000571, setup 0.00)
+
+Time for model construction: 0.392 seconds.
+
+Type:        DTMC
+States:      91 (1 initial)
+Transitions: 91
+
+Transition matrix: 4675 nodes (2 terminal), 91 minterms, vars: 47r/47c
+
+Prob0: 91 iterations in 0.04 seconds (average 0.000429, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 91, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.04 seconds.
+
+Result: 1.0 (value in the initial state)

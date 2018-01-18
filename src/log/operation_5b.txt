@@ -1,0 +1,87 @@
+Model checking: P=? [ F d3=0 ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 91 iterations in 0.02 seconds (average 0.000242, setup 0.00)
+
+Time for model construction: 0.259 seconds.
+
+Type:        DTMC
+States:      5335 (1 initial)
+Transitions: 11531
+
+Transition matrix: 3381 nodes (10 terminal), 11531 minterms, vars: 38r/38c
+
+Prob0: 91 iterations in 0.03 seconds (average 0.000308, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 5335, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.028 seconds.
+
+Result: 1.0 (value in the initial state)
+
+
+
+Model checking: P=? [ F nse4&spd1=0&!mod(d1,ci4)=0 ]
+
+Prob0: 9 iterations in 0.01 seconds (average 0.000667, setup 0.00)
+
+Prob1: 25 iterations in 0.01 seconds (average 0.000520, setup 0.00)
+
+yes = 33, no = 5139, maybe = 163
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=38, nodes=1135] [53.2 KB]
+Adding explicit sparse matrices... [levels=38, num=1, compact] [6.8 KB]
+Creating vector for diagonals... [dist=1, compact] [10.4 KB]
+Creating vector for RHS... [dist=2, compact] [10.4 KB]
+Allocating iteration vectors... [2 x 41.7 KB]
+TOTAL: [164.2 KB]
+
+Starting iterations...
+
+Jacobi: 30 iterations in 0.00 seconds (average 0.000067, setup 0.00)
+
+Value in the initial state: 0.6250983112904365
+
+Time for model checking: 0.048 seconds.
+
+Result: 0.6250983112904365 (value in the initial state)
+
+
+
+Model checking: P=? [ F nse5&spd2=0&!mod(d3,ci5)=0 ]
+
+Prob0: 68 iterations in 0.04 seconds (average 0.000515, setup 0.00)
+
+Prob1: 85 iterations in 0.04 seconds (average 0.000447, setup 0.00)
+
+yes = 720, no = 900, maybe = 3715
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=38, nodes=3464] [162.4 KB]
+Adding explicit sparse matrices... [levels=38, num=1, compact] [37.9 KB]
+Creating vector for diagonals... [dist=1, compact] [10.4 KB]
+Creating vector for RHS... [dist=2, compact] [10.4 KB]
+Allocating iteration vectors... [2 x 41.7 KB]
+TOTAL: [304.5 KB]
+
+Starting iterations...
+
+Jacobi: 90 iterations in 0.01 seconds (average 0.000089, setup 0.01)
+
+Value in the initial state: 0.6507381247299331
+
+Time for model checking: 0.115 seconds.
+
+Result: 0.6507381247299331 (value in the initial state)

@@ -1,0 +1,137 @@
+Ontology: complex_tactical_missions
+
+Import: complex_missions
+  Class: Action
+  Class: Area
+  Class: Asset
+  Class: HoverAction
+  Class: KineticAction
+  Class: Mission
+  Class: SensorAction
+  Class: TraversePathSegmentAction
+  Class: Waypoint
+  DataProperty: hasCostValue
+  DataProperty: hasSpeedInKilometersPerHour
+  ObjectProperty: hasAction
+  ObjectProperty: hasEndpoint
+  ObjectProperty: hasSibling
+  ObjectProperty: hasWaypoint
+  ObjectProperty: isWaypointOf
+
+Datatype: xsd:double
+Datatype: xsd:integer
+
+Class: DirectThreatAreaAction
+  EquivalentTo: ThreatAreaAction
+    and (DirectThreatAreaHoverAction or DirectThreatAreaTPSA)
+
+Class: DirectThreatAreaHoverAction
+  EquivalentTo: ThreatAreaAction
+    and (HoverAction
+      and (hasWaypoint some ThreatAreaWaypoint))
+  DisjointWith: DirectThreatAreaTPSA
+
+Class: DirectThreatAreaTPSA
+  EquivalentTo: ThreatAreaAction
+    and (TraversePathSegmentAction
+      and (hasEndpoint some ThreatAreaWaypoint))
+  DisjointWith: DirectThreatAreaHoverAction
+
+Class: DomainConcept
+
+Class: HighVulnerabilityAsset
+  EquivalentTo: Asset
+    and (hasCostValue some xsd:integer[<= 1000])
+    and (hasSpeedInKilometersPerHour some xsd:integer[<= 20])
+  SubClassOf: hasRiskAcceptabilityFactor value HighRiskAcceptabilityFactor,
+    hasVulnerability value HighVulnerability
+  DisjointWith: LowVulnerabilityAsset
+
+Class: LowVulnerabilityAsset
+  EquivalentTo: Asset
+    and (hasCostValue some xsd:integer[>= 3000])
+    and (hasSpeedInKilometersPerHour some xsd:integer[<= 60])
+  SubClassOf: hasRiskAcceptabilityFactor value LowRiskAcceptabilityFactor
+    hasVulnerability value LowVulnerability,
+  DisjointWith: HighVulnerabilityAsset
+
+Class: RiskAcceptabilityFactor
+  EquivalentTo: DomainConcept
+    and ({HighRiskAcceptabilityFactor, LowRiskAcceptabilityFactor})
+  DisjointWith: Vulnerability
+
+Class: ThreatArea
+  EquivalentTo: Area
+    and (hasWaypoint some ThreatAreaWaypoint)
+
+Class: ThreatAreaAction
+  EquivalentTo: KineticAction
+    and (hasWaypoint some ThreatAreaWaypoint)
+
+Class: ThreatAreaWaypoint
+  EquivalentTo: Waypoint
+    and (isWaypointOf some ThreatArea)
+
+Class: ThreatenedAsset
+  EquivalentTo: Asset
+    and (hasAction some DirectThreatAreaAction)
+
+Class: ValidAsset
+  EquivalentTo: ThreatenedAsset
+    and (hasAction some (SensorAction
+      and (hasSibling some DirectThreatAreaAction)))
+
+Class: Vulnerability
+  EquivalentTo: DomainConcept
+    and ({HighVulnerability, LowVulnerability})
+  DisjointWith: RiskAcceptabilityFactor
+
+DisjointClasses: Action, Area, Asset, DomainConcept, Mission, Waypoint
+
+DataProperty: hasDoubleValue
+  Characteristics: Functional
+  Domain: DomainConcept
+  Range: xsd:double
+
+Individual: HighRiskAcceptabilityFactor
+  Types: RiskAcceptabilityFactor
+  Facts: hasDoubleValue 0.8
+
+Individual: HighVulnerability
+  Types: Vulnerability
+  Facts: hasDoubleValue 0.1
+
+Individual: LowRiskAcceptabilityFactor
+  Types: RiskAcceptabilityFactor
+  Facts: hasDoubleValue 0.6
+
+Individual: LowVulnerability
+  Types: Vulnerability
+  Facts: hasDoubleValue 0.01
+
+ObjectProperty: hasRiskAcceptabilityFactor
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: Asset
+  Range: RiskAcceptabilityFactor
+
+ObjectProperty: hasVulnerability
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: Asset
+  Range: Vulnerability
+
+ObjectProperty: invades
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: DirectThreatAreaTPSA
+  Range: ThreatArea
+
+Rule:
+    ThreatArea(?a),
+    hasEndpoint(?x, ?w),
+    isWaypointOf(?w, ?a)
+  -> invades(?x, ?a)

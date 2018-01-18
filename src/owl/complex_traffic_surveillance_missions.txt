@@ -1,0 +1,197 @@
+Ontology: complex_traffic_surveillance_missions
+
+Import: complex_missions
+  Class: owl:Nothing
+  Class: Action
+  Class: Area
+  Class: Asset
+  Class: HoverAction
+  Class: Mission
+  Class: SensorAction
+  Class: Waypoint
+  ObjectProperty: hasAction
+  ObjectProperty: hasWaypoint
+
+Datatype: xsd:double
+Datatype: xsd:integer
+
+Class: DomainConcept
+
+Class: FreewaySection
+  SubClassOf: Road,
+    approachesMinimumSpeed some xsd:double,
+    exceedsMinimumSpeed some xsd:double,
+    exceedsNominalSpeed some xsd:double,
+    hasLaneClassification some LaneClassification,
+    hasRampFrequency some RampFrequency
+
+Class: HighRampFrequency
+  SubClassOf: RampFrequency
+  DisjointWith: LowRampFrequency
+
+Class: HighSpeedFreewaySection
+  EquivalentTo: FreewaySection
+    and (hasLaneClassification some ThreeLaneClassification)
+    and (hasRampFrequency some LowRampFrequency)
+  SubClassOf: approachesMinimumSpeed some xsd:double[>= 0.2],
+    exceedsMinimumSpeed some xsd:double[>= 0.9],
+    exceedsNominalSpeed some xsd:double[>= 0.5]
+  DisjointWith: LowSpeedFreewaySection
+
+Class: HighSpeedLidarAction
+  EquivalentTo: LidarAction
+    and (monitors some HighSpeedFreewaySection)
+  SubClassOf: hasIntervalCalibrationFactor value HighIntervalCalibrationFactor
+  DisjointWith: LowSpeedLidarAction
+
+Class: IntervalCalibrationFactor
+  EquivalentTo: DomainConcept
+    and ({HighIntervalCalibrationFactor, LowIntervalCalibrationFactor})
+
+Class: LaneClassification
+  EquivalentTo: ThreeLaneClassification
+    or TwoLaneClassification
+  SubClassOf: ValuePartition
+  DisjointWith: RampFrequency
+
+Class: LidarAction
+  SubClassOf: SensorAction,
+    hasIntervalCalibrationFactor some IntervalCalibrationFactor,
+    hasIntervalInSeconds some xsd:integer,
+    isConcurrentWith some HoverAction
+  DisjointWith: PhotoSurveillanceAction
+
+Class: LowRampFrequency
+  SubClassOf: RampFrequency
+  DisjointWith: HighRampFrequency
+
+Class: LowSpeedFreewaySection
+  EquivalentTo: FreewaySection
+    and (hasLaneClassification some TwoLaneClassification)
+    and (hasRampFrequency some HighRampFrequency)
+  SubClassOf: approachesMinimumSpeed some xsd:double[>= 0.3],
+    exceedsMinimumSpeed some xsd:double[>= 0.7],
+    exceedsNominalSpeed some xsd:double[>= 0.4]
+  DisjointWith: HighSpeedFreewaySection
+
+Class: LowSpeedLidarAction
+  EquivalentTo: LidarAction
+    and (monitors some LowSpeedFreewaySection)
+  SubClassOf: hasIntervalCalibrationFactor value LowIntervalCalibrationFactor
+  DisjointWith: HighSpeedLidarAction
+
+Class: PhotoSurveillanceAction
+  DisjointWith: LidarAction
+
+Class: RampFrequency
+  EquivalentTo: HighRampFrequency
+    or LowRampFrequency
+  SubClassOf: ValuePartition
+  DisjointWith: LaneClassification
+
+Class: Road
+  SubClassOf: hasWaypoint some Waypoint
+
+Class: ThreeLaneClassification
+  SubClassOf: LaneClassification
+  DisjointWith: TwoLaneClassification
+
+Class: TwoLaneClassification
+  SubClassOf: LaneClassification
+  DisjointWith: ThreeLaneClassification
+
+Class: ValuePartition
+
+DisjointClasses: Action, Area, Asset, DomainConcept, Mission, Road, ValuePartition, Waypoint
+
+DataProperty: approachesMinimumSpeed
+  Characteristics: Functional
+  Domain: FreewaySection
+  Range: xsd:double
+
+DataProperty: exceedsMinimumSpeed
+  Characteristics: Functional
+  Domain: FreewaySection
+  Range: xsd:double
+
+DataProperty: exceedsNominalSpeed
+  Characteristics: Functional
+  Domain: FreewaySection
+  Range: xsd:double
+
+DataProperty: hasDoubleValue
+  Characteristics: Functional
+  Domain: DomainConcept
+  Range: xsd:double
+
+DataProperty: hasIntegerValue
+  Characteristics: Functional
+  Domain: DomainConcept
+  Range: xsd:integer
+
+DataProperty: hasIntervalInSeconds
+  Characteristics: Functional
+  Domain: LidarAction
+  Range: xsd:integer
+
+Individual: HighIntervalCalibrationFactor
+  Types: IntervalCalibrationFactor
+  Facts: hasIntegerValue 3
+
+Individual: LowIntervalCalibrationFactor
+  Types: IntervalCalibrationFactor
+  Facts: hasIntegerValue 2
+
+ObjectProperty: hasIntervalCalibrationFactor
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: LidarAction
+  Range: IntervalCalibrationFactor
+
+ObjectProperty: hasLaneClassification
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: FreewaySection
+  Range: LaneClassification
+
+ObjectProperty: hasRampFrequency
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: FreewaySection
+  Range: RampFrequency
+
+ObjectProperty: isConcurrentWith
+  Characteristics: Asymmetric,
+    Irreflexive
+  Domain: LidarAction
+  Range: HoverAction
+
+ObjectProperty: monitors
+  Characteristics: Asymmetric,
+    Irreflexive
+  Domain: LidarAction
+  Range: FreewaySection
+
+Rule:
+    hasAction(?a, ?x),
+    isConcurrentWith(?y, ?x)
+  -> hasAction(?a, ?y)
+
+Rule:
+    HoverAction(?h),
+    FreewaySection(?f),
+    LidarAction(?l),
+    hasWaypoint(?f, ?w),
+    hasWaypoint(?h, ?w),
+    isConcurrentWith(?l, ?h)
+  -> monitors(?l, ?f)
+
+Rule:
+    hasAction(?a, ?x),
+    hasAction(?b, ?y),
+    isConcurrentWith(?x, ?y),
+    DifferentFrom (?a, ?b)
+  -> owl:Nothing(?x)

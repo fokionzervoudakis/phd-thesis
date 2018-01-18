@@ -1,0 +1,41 @@
+Model checking: P=? [ F d4=0&!a1d&raf1>0.6 ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 121 iterations in 0.04 seconds (average 0.000355, setup 0.00)
+
+Time for model construction: 0.35 seconds.
+
+Type:        DTMC
+States:      196 (1 initial)
+Transitions: 266
+
+Transition matrix: 5393 nodes (4 terminal), 266 minterms, vars: 42r/42c
+
+Prob0: 121 iterations in 0.09 seconds (average 0.000702, setup 0.00)
+
+Prob1: 47 iterations in 0.04 seconds (average 0.000872, setup 0.00)
+
+yes = 6, no = 75, maybe = 115
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=42, nodes=4775] [111.9 KB]
+Adding explicit sparse matrices... [levels=42, num=1, compact] [0.9 KB]
+Creating vector for diagonals... [dist=1, compact] [0.4 KB]
+Creating vector for RHS... [dist=2, compact] [0.4 KB]
+Allocating iteration vectors... [2 x 1.5 KB]
+TOTAL: [116.7 KB]
+
+Starting iterations...
+
+Jacobi: 116 iterations in 0.01 seconds (average 0.000009, setup 0.01)
+
+Value in the initial state: 0.49483865960020695
+
+Time for model checking: 0.158 seconds.
+
+Result: 0.49483865960020695 (value in the initial state)

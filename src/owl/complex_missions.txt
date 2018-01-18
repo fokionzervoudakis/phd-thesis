@@ -1,0 +1,185 @@
+Ontology: complex_missions
+
+Datatype: xsd:integer
+
+Class: owl:Nothing
+
+Class: Action
+
+Class: ARDrone
+  SubClassOf: NamedAsset,
+    hasCostValue some xsd:integer[<= 500],
+    hasEnduranceInSeconds some xsd:integer[<= 70],
+    hasSpeedInKilometersPerHour some xsd:integer[<= 18]
+  DisjointWith: Hummingbird
+
+Class: Area
+  SubClassOf: hasWaypoint some Waypoint
+
+Class: Asset
+  SubClassOf: hasAction some KineticAction,
+    hasCostValue some xsd:integer,
+    hasEnduranceInSeconds some xsd:integer,
+    hasSpeedInKilometersPerHour some xsd:integer
+
+Class: HoverAction
+  SubClassOf: KineticAction,
+    hasWaypoint some Waypoint
+  DisjointWith: TraversePathSegmentAction
+
+Class: Hummingbird
+  SubClassOf: NamedAsset,
+    hasCostValue some xsd:integer[>= 5000],
+    hasEnduranceInSeconds some xsd:integer[<= 120],
+    hasSpeedInKilometersPerHour some xsd:integer[<= 50]
+  DisjointWith: ARDrone
+
+Class: KineticAction
+  SubClassOf: Action,
+    hasDurationInSeconds some xsd:integer,
+    hasPrecondition only Action
+  DisjointWith: SensorAction
+
+Class: Mission
+  SubClassOf: hasAsset some Asset
+
+Class: NamedAsset
+  SubClassOf: Asset
+
+Class: PhotoSurveillanceAction
+  SubClassOf: SensorAction,
+    hasDurationInSeconds some xsd:integer,
+    hasPrecondition only Action
+
+Class: SensorAction
+  SubClassOf: Action
+  DisjointWith: KineticAction
+
+Class: TraversePathSegmentAction
+  SubClassOf: KineticAction,
+    hasStartPoint some Waypoint,
+    hasEndpoint some Waypoint
+  DisjointWith: HoverAction
+
+Class: Waypoint
+
+DisjointClasses: Action, Area, Asset, Mission, Waypoint
+
+DataProperty: hasCostValue
+  Characteristics: Functional
+  Domain: Asset
+  Range: xsd:integer
+
+DataProperty: hasDurationInSeconds
+  Characteristics: Functional
+  Domain: Action
+  Range: xsd:integer
+
+DataProperty: hasEnduranceInSeconds
+  Characteristics: Functional
+  Domain: Asset
+  Range: xsd:integer
+
+DataProperty: hasSpeedInKilometersPerHour
+  Characteristics: Functional
+  Domain: Asset
+  Range: xsd:integer
+
+ObjectProperty: hasAction
+  Characteristics: Asymmetric,
+    Irreflexive,
+    InverseFunctional
+  Domain: Asset
+  Range: Action
+  InverseOf: isActionOf
+
+ObjectProperty: hasAsset
+  Characteristics: Asymmetric,
+    Irreflexive,
+    InverseFunctional
+  Domain: Mission
+  Range: Asset
+
+ObjectProperty: hasEndpoint
+  SubPropertyOf: hasWaypoint
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: TraversePathSegmentAction
+  Range: Waypoint
+
+ObjectProperty: hasPrecondition
+  Characteristics: Transitive
+  Domain: Action
+  Range: Action
+  InverseOf: isPreconditionTo
+
+ObjectProperty: hasSibling
+  Characteristics: Asymmetric,
+    Irreflexive
+  Domain: SensorAction
+  Range: KineticAction
+
+ObjectProperty: hasStartPoint
+  SubPropertyOf: hasWaypoint
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: TraversePathSegmentAction
+  Range: Waypoint
+
+ObjectProperty: hasWaypoint
+  Characteristics: Asymmetric,
+    Irreflexive
+  Range: Waypoint
+  InverseOf: isWaypointOf
+
+ObjectProperty: isActionOf
+  Characteristics: Asymmetric,
+    Irreflexive,
+    Functional
+  Domain: Action
+  Range: Asset
+  InverseOf: hasAction
+
+ObjectProperty: isPreconditionTo
+  Characteristics: Transitive
+  Domain: Action
+  Range: Action
+  InverseOf: hasPrecondition
+
+ObjectProperty: isWaypointOf
+  Characteristics: Asymmetric,
+    Irreflexive
+  Domain: Waypoint
+  InverseOf: hasWaypoint
+
+Rule:
+    KineticAction(?x),
+    KineticAction(?y),
+    SensorAction(?z),
+    hasAction(?a, ?x),
+    hasAction(?a, ?y),
+    hasAction(?a, ?z),
+    hasPrecondition(?x, ?y),
+    hasPrecondition(?z, ?y)
+  -> hasSibling(?z, ?x)
+
+Rule:
+    KineticAction(?x),
+    KineticAction(?y),
+    SensorAction(?z),
+    hasAction(?a, ?x),
+    hasAction(?a, ?y),
+    hasAction(?a, ?z),
+    hasPrecondition(?x, ?y),
+    hasSibling(?z, ?y)
+  -> hasSibling(?z, ?x)
+
+Rule:
+    SensorAction(?y),
+    hasAction(?a, ?x),
+    hasAction(?b, ?y),
+    hasPrecondition(?x, ?y),
+    DifferentFrom (?a, ?b)
+  -> owl:Nothing(?y)

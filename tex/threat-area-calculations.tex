@@ -1,0 +1,211 @@
+\chapter{Threat Area Calculations}
+\label{chap:Threat_Area_Calculations}
+
+Threat area incursions have been considered throughout this thesis. The CVC uses hard-coded geodesic equations to establish the occurrence, and calculate the duration, of threat area incursions committed by UAVs (as described in Chapter~\ref{chap:Method_Overview}). The equations employed by the CVC are underpinned by a spherical Earth with a two-dimensional surface. This rudimentary \emph{mission environment} enables our prototype to avoid complexities associated with three-dimensional topographies. (Because the shape of the Earth is approximately ellipsoidal, geodetic calculations that assume a spherical geometry result in errors ranging between 0.3\% and 0.55\%.)
+
+In this context, a direct flightpath between two waypoints can be delineated by the minor arc of a great circle. A waypoint is a zero-dimensional spherical point designated by latitude and longitude; a great circle is the intersection of a sphere and a plane passing through the center of that sphere. The minor arc of a great circle, which we will refer to as a \emph{great circle arc}, is the shortest path between two points on the surface of a sphere.
+
+Since great circle arcs can also be used to delineate threat area boundaries, an asset enters and exits a threat area at the intersection of two great circle arcs. We therefore use great circle intersections to establish the occurrence of threat area incursions.
+
+\section{Establishing Threat Area Incursions}
+
+Following from the definition of a great circle, a great circle arc lies on a plane that passes through the center of a sphere. Two great circles intersect when their respective planes intersect (the only other possibility being that the planes overlap), thereby forming a straight line that crosses the surface of the underlying sphere at two points. Consequently, the intersection of two great circle arcs must occur at one of the spherical points resulting from the intersection of the great circles underpinning those arcs.
+
+We consider great circle arcs~\emph{a} and~\emph{b} defined by points~$a_1$, $a_2$ and~$b_1$, $b_2$, respectively. The latitude and longitude coordinates that designate these points are converted to Cartesian coordinates using Equation~\ref{eq:cartesian_coordinates}, where~\emph{R} is the Earth's mean radius (6371 kilometers).
+
+\begin{figure}[ht]
+	\begin{equation}
+		\label{eq:cartesian_coordinates}
+			p =
+			\begin{bmatrix}
+				x\\
+				y\\
+				z
+			\end{bmatrix} =
+			\begin{bmatrix}
+				R \cdot \cos lat \cdot \cos lon\\
+				R \cdot \cos lat \cdot \sin lon\\
+				R \cdot \sin lat
+			\end{bmatrix}
+	\end{equation}
+\end{figure}
+
+Equation~\ref{eq:plane_vector} calculates vectors~$v_a$ and~$v_b$ from points~$a_1$, $a_2$ and~$b_1$, $b_2$, respectively, where each vector defines a plane containing the points used to calculate that vector. Equation~\ref{eq:unit_vector_a} calculates unit vectors~$u_a$ and~$u_b$ from~$v_a$ and~$v_b$, respectively. If unit vectors~$u_a$ and~$u_b$ are not identical (as determined by Equation~\ref{eq:overlaping_unit_vectors}) vectors~$v_a$ and~$v_b$ define planes that do not overlap.
+
+\newcommand{\br}{\nonumber\\}
+\newcommand{\pvlength}{\sqrt{{v_x}^2 + {v_y}^2 + {v_z}^2}}
+
+\begin{figure}[ht]
+	\begin{align}
+		\label{eq:plane_vector}
+			v & =
+			\begin{bmatrix}
+				v_x\\
+				v_y\\
+				v_z
+			\end{bmatrix} =
+			\begin{bmatrix}
+				y_1 \cdot z_2 - y_2 \cdot z_1\\
+				x_2 \cdot z_1 - x_1 \cdot z_2\\
+				x_1 \cdot y_2 - x_2 \cdot y_1
+			\end{bmatrix}\\
+			\br
+		\label{eq:unit_vector_a}
+			u & =
+			\begin{bmatrix}
+				u_x\\
+				u_y\\
+				u_z
+			\end{bmatrix} =
+			\begin{bmatrix}
+				v_x / \pvlength\\
+				v_y / \pvlength\\
+				v_z / \pvlength
+			\end{bmatrix}\\
+			\br
+		\label{eq:overlaping_unit_vectors}
+			u_1 \cap u_2 & =
+			\left\{
+				\begin{array}{l}
+					|u_{1x} - u_{2x}| < \varepsilon\\
+					|u_{1y} - u_{2y}| < \varepsilon\\
+					|u_{1z} - u_{2z}| < \varepsilon
+				\end{array}
+			\right.
+	\end{align}
+\end{figure}
+
+Two non-overlapping planes intersect in a straight line defined by direction vector~\emph{d}. Equation~\ref{eq:direction_vector} calculates~\emph{d} from vectors~$u_a$ and~$u_b$. Equation~\ref{eq:unit_vector_b} calculates the unit vector of~\emph{d}, which defines the coordinates of spherical point~$p_1$. Equation~\ref{eq:inverted_unit_vector} calculates the inverse of the unit vector of~\emph{d}, which defines the coordinates of spherical point~$p_2$. The latitude and longitude coordinates of~$p_1$ and~$p_2$ are calculated from their Cartesian coordinates using Equation~\ref{eq:latitude} and Equation~\ref{eq:longitude}, respectively. Since all values passed to trigonometric functions are expressed in radians, output from Equation~\ref{eq:latitude} and Equation~\ref{eq:longitude} must be converted from radians to degrees before proceeding to the next set of calculations.
+
+\newcommand{\dvlength}{\sqrt{{d_x}^2 + {d_y}^2 + {d_z}^2}}
+
+\begin{figure}[ht]
+	\begin{align}
+		\label{eq:direction_vector}
+			d & =
+			\begin{bmatrix}
+				d_x\\
+				d_y\\
+				d_z
+			\end{bmatrix} =
+			\begin{bmatrix}
+				u_{1y} \cdot u_{2z} - u_{2y} \cdot u_{1z}\\
+				u_{2x} \cdot u_{1z} - u_{1x} \cdot u_{2z}\\
+				u_{1x} \cdot u_{2y} - u_{2x} \cdot u_{1y}
+			\end{bmatrix}\\
+			\br
+		\label{eq:unit_vector_b}
+			p_1 & =
+			\begin{bmatrix}
+				p_{1x}\\
+				p_{1y}\\
+				p_{1z}
+			\end{bmatrix} =
+			\begin{bmatrix}
+				d_x / \dvlength\\
+				d_y / \dvlength\\
+				d_z / \dvlength
+			\end{bmatrix}\\
+			\br
+		\label{eq:inverted_unit_vector}
+			p_2 & =
+			\begin{bmatrix}
+				p_{2x}\\
+				p_{2y}\\
+				p_{2z}
+			\end{bmatrix} =
+			\begin{bmatrix}
+				-d_x / \dvlength\\
+				-d_y / \dvlength\\
+				-d_z / \dvlength
+			\end{bmatrix}\\
+			\br
+		\label{eq:latitude}
+			lat & = \arcsin \left(\frac{z}{R}\right)\\
+			\br
+		\label{eq:longitude}
+			lon & = \arctan(y, x)
+	\end{align}
+\end{figure}
+
+Having identified points~$p_1$ and~$p_2$, we check if either point is located on both arcs~\emph{a} and~\emph{b}. For arc~\emph{a} (defined by points~$a_1$ and~$a_2$) and point~$p_1$, we use the Haversine formula, which is described in Section~\ref{sec:Distance}, to calculate the distance from~$a_1$ to~$a_2$, $d_{(a_1, a_2)}$; and the distances from~$p_1$ to~$a_1$ and~$a_2$, $d_{(p_1, a_1)}$ and $d_{(p_1, a_2)}$, respectively. Consequently, $p_1 \in a \Leftrightarrow d_{(a_1, a_2)} = d_{(p_1, a_1)} + d_{(p_1, a_2)}$. Similarly, we check~$p_1$ with respect to arc~\emph{b}. If~$p_1$ is not an intersection, we check~$p_2$. If~$p_1$ and~$p_2$ are not intersection points, then arcs~\emph{a} and~\emph{b} do not intersect.
+
+\section{Calculating Threat Area Durations}
+
+Having established the occurrence of a threat area incursion, we proceed to calculate its duration. The duration of travel between two points is a function of distance and speed.
+
+\subsection{Distance}
+\label{sec:Distance}
+
+A great circle distance is the shortest distance between two points along a path on the surface of a sphere. The great circle distance~\emph{d} between points~$p_1$ and~$p_2$ with coordinates $lat_1$, $lon_1$ and $lat_2$, $lon_2$, respectively, can be calculated using the Haversine formula in Equation~\ref{eq:distance}, where~\emph{R} is the Earth's mean radius~\cite{Veness}. (All values passed to trigonometric functions are assumed radians.)
+
+\begin{figure}[ht]
+	\begin{align}
+		\label{eq:distance}
+			\nonumber a & = \sin^2 \frac{lat_2 - lat_1}{2} + \sin^2 \frac{lon_2 - lon_1}{2} \cdot \cos lat_1 \cdot \cos lat_2\\
+			\nonumber c & = 2 \cdot \arctan(\sqrt{a}, \sqrt{1 - a})\\
+			d & = R \cdot c
+	\end{align}
+\end{figure}
+
+\subsection{Speed}
+
+The velocity of a UAV at any given moment during flight is a function of four parameters including the velocity of the UAV in still air; the UAV's direction of travel; and the velocity and direction of the wind. Consider a UAV with velocity vector~$v_a$, which has magnitude~$|v_a|$ and direction~$\theta_a$. The UAV flies in a wind with velocity vector~$v_w$, which has magnitude~$|v_w|$ and direction~$\theta_w$. Let~\emph{i} and ~\emph{j} be~$1 ms^{-1}$ (meters per second) East and~$1 ms^{-1}$ North, respectively. The component form for each velocity vector can be calculated using Equation~\ref{eq:UAV_velocity_vector_component_form} and Equation~\ref{eq:wind_velocity_vector_component_form}; velocity can be calculated using Equation~\ref{eq:velocity}; and the speed of the UAV in~$ms^{-1}$ can be calculated using Equation~\ref{eq:speed}.
+
+\begin{figure}[ht]
+	\begin{align}
+		\label{eq:UAV_velocity_vector_component_form}
+			v_a & = |v_a| \cos \theta_ai + |v_a| \sin \theta_aj\\
+		\label{eq:wind_velocity_vector_component_form}
+			v_w & = |v_w| \cos \theta_wi + |v_w| \sin \theta_wj\\
+			\br
+		\label{eq:velocity}
+			v & = v_a + v_w\\
+			\br
+		\label{eq:speed}
+			s & = |v| \approx \sqrt{{v_a}^2 + {v_w}^2}
+	\end{align}
+\end{figure}
+
+\subsection{Bearing}
+
+The direction of travel along a great circle arc is defined by initial and final bearings. The initial bearing~$\theta$ from point~$p_1$ to point~$p_2$ is calculated using Equation~\ref{eq:initial_bearing}. Because the range of~$\arctan$ is the interval $[-180^\circ, 180^\circ]$, the initial bearing is normalized to a compass bearing~$\theta_{in}$ using Equation~\ref{eq:normalized_initial_bearing}. The range of~$\theta_{in}$ is the interval $[0, 360^\circ]$. The normalized final bearing~$\theta_{fn}$ is calculated by reversing the initial bearing from~$p_2$ to~$p_1$ using Equation~\ref{eq:normalized_final_bearing}.
+
+\begin{figure}[ht]
+	\begin{align}
+		\label{eq:initial_bearing}
+			\nonumber y & = \sin (lon_2 - lon_1) \cdot \cos lat_2\\
+			\nonumber x & = \cos lat_1 \cdot \sin lat_2 - \sin lat_1 \cdot \cos lat_2 \cdot \cos (lon_2 - lon_1)\\
+			\theta & = \arctan(y, x)\\
+			\br
+		\label{eq:normalized_initial_bearing}
+			\theta_{in} & = (\theta_{(p_1, p_2)} \cdot \frac{360}{2\pi} + 360) \bmod{360}\\
+			\br
+		\label{eq:normalized_final_bearing}
+			\theta_{fn} & = (\theta_{(p_2, p_1)} \cdot \frac{360}{2\pi} + 180) \bmod{360}
+	\end{align}
+\end{figure}
+
+Each bearing is applied to a specific route segment. The initial bearing defines the direction of travel from~$p_1$ to midpoint~$p_m$ between~$p_1$ and~$p_2$. The final bearing defines the direction of travel from~$p_m$ to~$p_2$. The latitude and longitude coordinates for~$p_m$ are calculated using Equation~\ref{eq:midpoint_latitude} and Equation~\ref{eq:midpoint_longitude}, respectively.
+
+\begin{figure}[ht]
+	\begin{align}
+			\nonumber Bx & = \cos lat_2 \cdot \cos(lon_2 - lon_1)\\
+			\nonumber By & = \cos lat_2 \cdot \sin(lon_2 - lon_1)\\
+		\label{eq:midpoint_latitude}
+			lat_m & = \arctan(\sin lat_1 + \sin lat_2, \sqrt{(\cos lat_1 + Bx)^2 + By^2})\\
+		\label{eq:midpoint_longitude}
+			lon_m & = lon_1 + \arctan(By, \cos lat_1 + Bx)
+	\end{align}
+\end{figure}
+
+\subsection{Duration}
+
+The duration of travel along a great circle arc defined by initial and final bearings requires calculations for two speeds and two distances. Equation~\ref{eq:extended_duration} generalizes this requirement by calculating the duration of travel along a path delineated by~\emph{n} waypoints, where $d_{(p_i, p_{i + 1})}$ is the distance in kilometers between sequential points~$p_i$ and~$p_{i + 1}$; and $s_{(p_i, p_{i + 1})}$ is the speed of travel in~$ms^{-1}$ from~$p_i$ to~$p_{i + 1}$. Because Equation~\ref{eq:distance} calculates distance in kilometers and Equation~\ref{eq:speed} calculates speed in meters per second, Equation~\ref{eq:extended_duration} converts distances to meters in order to calculate duration in seconds.
+
+\begin{figure}[ht]
+	\begin{equation}
+		\label{eq:extended_duration}
+			\text{duration} := \sum_{i=1}^n \frac{d_{(p_i, p_{i + 1})}}{s_{(p_i, p_{i + 1})}} \cdot 1000
+	\end{equation}
+\end{figure}

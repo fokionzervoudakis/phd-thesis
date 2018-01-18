@@ -1,0 +1,621 @@
+\begin{thebibliography}{100}
+
+\bibitem{orbitlogic}
+``{UAV Planner}.'' [online] Available at:
+  \url{http://www.orbitlogic.com/products/uav.php}.
+
+\bibitem{gatech}
+``{Research Projects: MissionLab}.'' [online] Available at:
+  \url{http://www.cc.gatech.edu/ai/robot-lab/research/MissionLab/}.
+
+\bibitem{Nowak_2007}
+D.~J. Nowak, I.~Price, and G.~B. Lamont, ``{Self Organized UAV Swarm Planning
+  Optimization for Search and Destroy Using SWARMFARE Simulation},'' in {\em
+  Proceedings of the 39th Conference on Winter Simulation: 40 Years! The Best
+  Is Yet to Come}, WSC '07, pp.~1315--1323, IEEE Press, 2007.
+
+\bibitem{Perron_2008}
+J.~Perron, J.~Hogan, B.~Moulin, J.~Berger, and M.~B{\'e}langer, ``{A Hybrid
+  Approach Based on Multi-Agent Geosimulation and Reinforcement Learning to
+  Solve a UAV Patrolling Problem},'' in {\em Proceedings of the 40th Conference
+  on Winter Simulation}, WSC '08, pp.~1259--1267, Winter Simulation Conference,
+  2008.
+
+\bibitem{Nowak_2008}
+D.~J. Nowak, G.~B. Lamont, and G.~L. Peterson, ``{Emergent Architecture in Self
+  Organized Swarm Systems for Military Applications},'' in {\em Proceedings of
+  the 2008 GECCO Conference Companion on Genetic and Evolutionary Computation},
+  GECCO '08, pp.~1913--1920, ACM, 2008.
+
+\bibitem{Zitzler_2004}
+E.~Zitzler, M.~Laumanns, and S.~Bleuler, ``{A Tutorial on Evolutionary
+  Multiobjective Optimization},'' in {\em Metaheuristics for Multiobjective
+  Optimisation} (X.~Gandibleux, M.~Sevaux, K.~S{\"o}rensen, and V.~T'kindt,
+  eds.), vol.~535 of {\em Lecture Notes in Economics and Mathematical Systems},
+  pp.~3--37, Springer Berlin Heidelberg, 2004.
+
+\bibitem{Agogino_2012}
+A.~Agogino, C.~HolmesParker, and K.~Tumer, ``{Evolving Large Scale UAV
+  Communication System},'' in {\em Proceedings of the Fourteenth International
+  Conference on Genetic and Evolutionary Computation Conference}, GECCO '12,
+  pp.~1023--1030, ACM, 2012.
+
+\bibitem{Stouch_2011}
+D.~W. Stouch, E.~Zeidman, M.~Richards, K.~D. McGraw, and W.~Callahan,
+  ``{Coevolving Collection Plans for UAS Constellations},'' in {\em Proceedings
+  of the 13th Annual Conference on Genetic and Evolutionary Computation}, GECCO
+  '11, pp.~1691--1698, ACM, 2011.
+
+\bibitem{Rosenberg_2008}
+B.~Rosenberg, M.~Richards, J.~T. Langton, S.~Tenenbaum, and D.~W. Stouch,
+  ``{Applications of Multi-objective Evolutionary Algorithms to Air Operations
+  Mission Planning},'' in {\em Proceedings of the 2008 GECCO Conference
+  Companion on Genetic and Evolutionary Computation}, GECCO '08,
+  pp.~1879--1886, ACM, 2008.
+
+\bibitem{Pohl_2008}
+A.~J. Pohl and G.~B. Lamont, ``{Multi-Objective UAV Mission Planning Using
+  Evolutionary Computation},'' in {\em Proceedings of the 2008 Winter
+  Simulation Conference}, WSC '08, pp.~1268--1279, Winter Simulation
+  Conference, 2008.
+
+\bibitem{Shetty_2008}
+V.~K. Shetty, M.~Sudit, and R.~Nagi, ``{Priority-Based Assignment and Routing
+  of a Fleet of Unmanned Combat Aerial Vehicles},'' {\em Computers and
+  Operations Research}, vol.~35, pp.~1813--1828, June 2008.
+
+\bibitem{Ahner_2006}
+D.~K. Ahner, A.~H. Buss, and J.~Ruck, ``{Assignment Scheduling Capability for
+  Unmanned Aerial Vehicles: A Discrete Event Simulation With Optimization in
+  the Loop Approach to Solving a Scheduling Problem},'' in {\em Proceedings of
+  the 38th Conference on Winter Simulation}, WSC '06, pp.~1349--1356, Winter
+  Simulation Conference, 2006.
+
+\bibitem{Alver_2012}
+Y.~Alver, M.~Ozdogan, and E.~Yucesan, ``{Assessing the Robustness of UAV
+  Assignments},'' in {\em Proceedings of the 2012 Winter Simulation
+  Conference}, WSC '12, pp.~1--11, Winter Simulation Conference, 2012.
+
+\bibitem{Kamrani_2007}
+F.~Kamrani and R.~Ayani, ``{Simulation-Aided Path Planning of UAV},'' in {\em
+  Proceedings of the 39th Conference on Winter Simulation: 40 Years! The Best
+  Is Yet to Come}, WSC '07, pp.~1306--1314, IEEE Press, 2007.
+
+\bibitem{Corner_2004}
+J.~J. Corner and G.~B. Lamont, ``{Parallel Simulation of UAV Swarm
+  Scenarios},'' in {\em Proceedings of the 36th Conference on Winter
+  Simulation}, WSC '04, pp.~355--363, Winter Simulation Conference, 2004.
+
+\bibitem{Lian_2006}
+Z.~Lian and A.~Deshmukh, ``{Performance Prediction of an Unmanned Airborne
+  Vehicle Multi-Agent System},'' {\em European Journal of Operational
+  Research}, vol.~172, no.~2, pp.~680--695, 2006.
+
+\bibitem{Hamilton_2007}
+S.~Hamilton, C.~T. Schmoyer, and J.~A. {``Drew''}~Hamilton, Jr., ``{Validating
+  a Network Simulation Testbed for Army UAVs},'' in {\em Proceedings of the
+  39th Conference on Winter Simulation: 40 Years! The Best Is Yet to Come}, WSC
+  '07, pp.~1300--1305, IEEE Press, 2007.
+
+\bibitem{Cebrowski_1998}
+A.~K. Cebrowski and J.~J. Garstka, ``{Network-Centric Warfare: Its Origin and
+  Future},'' {\em U.S. Naval Institute Proceedings}, vol.~124, no.~1,
+  pp.~28--35, 1998.
+
+\bibitem{Chasparis_2005}
+G.~C. Chasparis and J.~S. Shamma, ``{Linear-Programming-Based Multi-Vehicle
+  Path Planning With Adversaries},'' in {\em Proceedings of the 2005 American
+  Control Conference}, ACC '05, pp.~1072--1077, June 2005.
+
+\bibitem{Jang_2005}
+M.-W. Jang and G.~Agha, ``{Scalable Agent Distribution Mechanisms for
+  Large-Scale UAV Simulations},'' in {\em International Conference on
+  Integration of Knowledge Intensive Multi-Agent Systems}, KIMAS '05,
+  pp.~85--90, April 2005.
+
+\bibitem{Russo_2006}
+J.~Russo, M.~Amduka, K.~Pedersen, R.~Lethin, B.~Gelfand, J.~Springer,
+  R.~Manohar, and R.~Melhem, ``{Enabling Cognitive Architectures for UAV
+  Mission Planning},'' in {\em Proceedings of the High Performance Embedded
+  Computing Workshop}, HPEC '06, September 2006.
+
+\bibitem{Zervoudakis_2013}
+F.~Zervoudakis, D.~S. Rosenblum, S.~Elbaum, and A.~Finkelstein, ``{Cascading
+  Verification: An Integrated Method for Domain-Specific Model Checking},'' in
+  {\em Proceedings of the 2013 9th Joint Meeting on the Foundations of Software
+  Engineering}, ESEC/FSE '13, pp.~400--410, ACM, 2013.
+
+\bibitem{Baier_2008}
+C.~Baier and J.-P. Katoen, {\em {Principles of Model Checking}}.
+\newblock The MIT Press, 2008.
+
+\bibitem{Robby_2003}
+Robby, M.~B. Dwyer, and J.~Hatcliff, ``{Bogor: An Extensible and Highly-Modular
+  Software Model Checking Framework},'' in {\em Proceedings of the 9th European
+  Software Engineering Conference Held Jointly With the 11th ACM SIGSOFT
+  International Symposium on Foundations of Software Engineering}, ESEC/FSE-11,
+  pp.~267--276, ACM, 2003.
+
+\bibitem{Narayanan_2002}
+S.~Narayanan and S.~A. McIlraith, ``{Simulation, Verification and Automated
+  Composition of Web Services},'' in {\em Proceedings of the 11th International
+  Conference on World Wide Web}, WWW '02, pp.~77--88, ACM, 2002.
+
+\bibitem{Di_Pietro_2012}
+I.~D. Pietro, F.~Pagliarecci, and L.~Spalazzi, ``{Model Checking Semantically
+  Annotated Services},'' {\em IEEE Transactions on Software Engineering},
+  vol.~38, pp.~592--608, May 2012.
+
+\bibitem{Boaro_2010}
+L.~Boaro, E.~Glorio, F.~Pagliarecci, and L.~Spalazzi, ``{Semantic Model
+  Checking Security Requirements for Web Services},'' in {\em Proceedings of
+  the 2010 International Conference on High Performance Computing and
+  Simulation}, HPCS '10, pp.~283--290, IEEE, 2010.
+
+\bibitem{Oghabi_2011}
+G.~Oghabi, J.~Bentahar, and A.~Benharref, ``{On the Verification of Behavioral
+  and Probabilistic Web Services Using Transformation},'' in {\em Proceedings
+  of the 2011 IEEE International Conference on Web Services}, ICWS '11,
+  pp.~548--555, IEEE Computer Society, 2011.
+
+\bibitem{Ankolekar_2005}
+A.~Ankolekar, M.~Paolucci, and K.~Sycara, ``{Towards a Formal Verification of
+  OWL-S Process Models},'' in {\em Proceedings of the 4th International
+  Conference on the Semantic Web}, ISWC '05, pp.~37--51, Springer-Verlag, 2005.
+
+\bibitem{Liu_2008}
+R.~Liu, C.~Hu, and C.~Zhao, ``{Model Checking for Web Service Flow Based on
+  Annotated OWL-S},'' in {\em Proceedings of the 2008 Ninth ACIS International
+  Conference on Software Engineering, Artificial Intelligence, Networking and
+  Parallel/Distributed Computing}, SNPD '08, pp.~741--746, IEEE Computer
+  Society, 2008.
+
+\bibitem{Lomuscio_2009}
+A.~Lomuscio and M.~Solanki, ``{Mapping OWL-S Processes to Multi Agent Systems:
+  A Verification Oriented Approach},'' in {\em Proceedings of the 2009
+  International Conference on Advanced Information Networking and Applications
+  Workshops}, WAINA '09, pp.~488--493, IEEE Computer Society, 2009.
+
+\bibitem{DARPA}
+DARPA, ``{UAVForge}.'' [online] Available at: \url{http://www.uavforge.net/}.
+
+\bibitem{Youngson_2004}
+G.~Youngson, K.~Baker, D.~Kelleher, and S.~Williams, ``{Project Support
+  Services for the Operational Mission and Scenario Analysis for Multiple
+  UAVs/UCAVs Control From Airborne Platform},'' March 2004.
+
+\bibitem{Hinton_2006}
+A.~Hinton, M.~Kwiatkowska, G.~Norman, and D.~Parker, ``{PRISM: A Tool for
+  Automatic Verification of Probabilistic Systems},'' in {\em Proceedings of
+  the 12th International Conference on Tools and Algorithms for the
+  Construction and Analysis of Systems}, TACAS '06, pp.~441--444,
+  Springer-Verlag, 2006.
+
+\bibitem{Evans}
+C.~C. Evans, ``{The Official YAML Web Site}.'' [online] Available at:
+  \url{http://yaml.org/}.
+
+\bibitem{Mernik_2005}
+M.~Mernik, J.~Heering, and A.~M. Sloane, ``{When and How to Develop
+  Domain-Specific Languages},'' {\em ACM Computing Surveys}, vol.~37,
+  pp.~316--344, December 2005.
+
+\bibitem{Rivera_2009}
+J.~E. Rivera, F.~Dur{\'a}n, and A.~Vallecillo, ``{Formal Specification and
+  Analysis of Domain Specific Models Using Maude},'' {\em Simulation}, vol.~85,
+  pp.~778--792, November 2009.
+
+\bibitem{Musen_2004}
+M.~A. Musen, ``{Ontology-Oriented Design and Programming},'' in {\em Knowledge
+  Engineering and Agent Technology}, pp.~3--16, IOS Press, 2004.
+
+\bibitem{Walter_2009}
+T.~Walter, F.~S. Parreiras, and S.~Staab, ``{{\it OntoDSL}: An Ontology-Based
+  Framework for Domain-Specific Languages},'' in {\em Proceedings of the 12th
+  International Conference on Model Driven Engineering Languages and Systems},
+  MODELS '09, pp.~408--422, Springer-Verlag, 2009.
+
+\bibitem{Horrocks_2011}
+I.~Horrocks and P.~F. Patel-Schneider, ``{Knowledge Representation and
+  Reasoning on the Semantic Web: OWL},'' in {\em Handbook of Semantic Web
+  Technologies} (J.~Domingue, D.~Fensel, and J.~A. Hendler, eds.), ch.~9,
+  pp.~365--398, Springer, 2011.
+
+\bibitem{Motik_2006}
+B.~Motik, I.~Horrocks, R.~Rosati, and U.~Sattler, ``{Can OWL and Logic
+  Programming Live Together Happily Ever After?},'' in {\em Proceedings of the
+  5th International Conference on the Semantic Web}, ISWC '06, pp.~501--514,
+  Springer-Verlag, 2006.
+
+\bibitem{Sensoy_2011}
+M.~\c{S}ensoy, G.~de~Mel, W.~W. Vasconcelos, and T.~J. Norman, ``{Ontological
+  Logic Programming},'' in {\em Proceedings of the International Conference on
+  Web Intelligence, Mining and Semantics}, WIMS '11, pp.~44:1--44:9, ACM, 2011.
+
+\bibitem{Matzner_2007}
+T.~Matzner and P.~Hitzler, ``{Any-World Access to OWL From Prolog},'' in {\em
+  Proceedings of the 30th Annual German Conference on Advances in Artificial
+  Intelligence}, KI '07, pp.~84--98, Springer-Verlag, 2007.
+
+\bibitem{Papadakis_2011}
+N.~Papadakis, K.~Stravoskoufos, E.~Baratis, E.~G.~M. Petrakis, and
+  D.~Plexousakis, ``{PROTON: A Prolog Reasoner for Temporal ONtologies in
+  OWL},'' {\em Expert Systems With Applications}, vol.~38, pp.~14660--14667,
+  November 2011.
+
+\bibitem{Samuel_2008}
+K.~Samuel, L.~Obrst, S.~Stoutenberg, K.~Fox, P.~Franklin, A.~Johnson,
+  K.~Laskey, D.~Nichols, S.~Lopez, and J.~Peterson, ``{Translating OWL and
+  Semantic Web Rules Into Prolog: Moving Toward Description Logic Programs},''
+  {\em Theory and Practice of Logic Programming}, vol.~8, pp.~301--322, May
+  2008.
+
+\bibitem{Lukacsy_2009a}
+G.~Luk{\'a}csy and P.~Szeredi, ``{Efficient Description Logic Reasoning in
+  Prolog: The DLog System},'' {\em Theory and Practice of Logic Programming},
+  vol.~9, pp.~343--414, May 2009.
+
+\bibitem{Almendros_Jimenez_2011}
+J.~M. Almendros-Jim{\'e}nez, ``{A Prolog-Based Query Language for OWL},'' {\em
+  Electronic Notes in Theoretical Computer Science}, vol.~271, pp.~3--22, March
+  2011.
+
+\bibitem{Elenius_2012}
+D.~Elenius, ``{SWRL-IQ: A Prolog-Based Query Tool for OWL and SWRL},'' in {\em
+  Proceedings of OWL: Experiences and Directions Workshop 2012}, vol.~849 of
+  {\em CEUR Workshop Proceedings}, CEUR-WS.org, 2012.
+
+\bibitem{Baader_2005}
+F.~Baader, I.~Horrocks, and U.~Sattler, ``{Description Logics as Ontology
+  Languages for the Semantic Web},'' in {\em Mechanizing Mathematical
+  Reasoning, Essays in Honor of J{\"o}rg H. Siekmann on the Occasion of His
+  60th Birthday} (D.~Hutter and W.~Stephan, eds.), no.~2605 in Lecture Notes in
+  Computer Science, pp.~228--248, Springer, 2005.
+
+\bibitem{Krotzsch_2011}
+M.~Kr{\"o}tzsch and S.~Speiser, ``{ShareAlike Your Data: Self-Referential Usage
+  Policies for the Semantic Web},'' in {\em Proceedings of the 10th
+  International Conference on the Semantic Web---Volume Part I}, ISWC '11,
+  pp.~354--369, Springer-Verlag, 2011.
+
+\bibitem{Horrocks_2004}
+I.~Horrocks, P.~F. Patel-Schneider, H.~Boley, S.~Tabet, B.~Grosof, and M.~Dean,
+  ``{SWRL: A Semantic Web Rule Language Combining OWL and RuleML}.'' W3C Member
+  Submission, May 2004.
+
+\bibitem{McGrath_2008}
+R.~E. McGrath and J.~Futrelle, ``{Reasoning About Provenance With OWL and SWRL
+  Rules},'' in {\em AAAI Spring Symposium: AI Meets Business Rules and Process
+  Management}, pp.~87--92, AAAI, 2008.
+
+\bibitem{Volz_2003}
+R.~Volz, S.~Decker, and D.~Oberle, ``{Bubo---Implementing OWL in Rule-Based
+  Systems},'' in {\em Proceedings of the 12th International Conference on World
+  Wide Web}, WWW '03, ACM, 2003.
+
+\bibitem{Costa_2012}
+V.~S. Costa, R.~Rocha, and L.~Damas, ``{The YAP Prolog System},'' {\em Theory
+  and Practice of Logic Programming}, vol.~12, pp.~5--34, January 2012.
+
+\bibitem{Greco_2010}
+S.~Greco and F.~A. Lisi, ``{Logic programming Languages for Databases and the
+  Web},'' in {\em A 25-Year Perspective on Logic Programming} (A.~Dovier and
+  E.~Pontelli, eds.), pp.~183--203, Springer-Verlag, 2010.
+
+\bibitem{Kwiatkowska_2012}
+M.~Kwiatkowska and D.~Parker, ``{Advances in Probabilistic Model Checking},''
+  in {\em Software Safety and Security: Tools for Analysis and Verification}
+  (T.~Nipkow, O.~Grumberg, and B.~Hauptmann, eds.), vol.~33 of {\em NATO
+  Science for Peace and Security Series D: Information and Communication
+  Security}, pp.~126--151, IOS Press, 2012.
+
+\bibitem{Rango_2010}
+A.~Rango, A.~Laliberte, K.~Havstad, C.~Winters, C.~Steele, and D.~Browning,
+  ``{Rangeland Resource Assessment, Monitoring, and Management Using Unmanned
+  Aerial Vehicle-Based Remote Sensing},'' in {\em Proceedings of the IEEE
+  International Geoscience {\&} Remote Sensing Symposium}, IGARSS '10,
+  pp.~608--611, IEEE, 2010.
+
+\bibitem{Jimenez_Berni_2009}
+J.~A. Jim{\'e}nez-Berni, P.~J. Zarco-Tejada, L.~Suarez, and E.~Fereres,
+  ``{Thermal and Narrowband Multispectral Remote Sensing for Vegetation
+  Monitoring From an Unmanned Aerial Vehicle},'' {\em IEEE Transactions on
+  Geoscience and Remote Sensing}, vol.~47, pp.~722--738, March 2009.
+
+\bibitem{Heintz_2007}
+F.~Heintz, P.~Rudol, and P.~Doherty, ``{From Images to Traffic Behavior---A UAV
+  Tracking and Monitoring Application},'' in {\em Proceedings of the 10th
+  International Conference on Information Fusion}, FUSION '07, pp.~1--8, IEEE,
+  2007.
+
+\bibitem{Karaman_2008}
+S.~Karaman and E.~Frazzoli, ``{Complex Mission Optimization for Multiple UAVs
+  Using Linear Temporal Logic},'' in {\em Proceedings of the 2008 American
+  Control Conference}, ACC '08, pp.~2003--2009, IEEE, 2008.
+
+\bibitem{Tosic_2003}
+P.~Tosic, M.-W. Jang, S.~Reddy, J.~Chia, L.~Chen, and G.~Agha, ``{Modeling a
+  System of UAVs on a Mission},'' in {\em Proceedings of the 7th World
+  Multiconference on Systemics, Cybernetics and Informatics}, SCI '03,
+  pp.~508--514, 2003.
+
+\bibitem{DoD_2005}
+{United States Department of Defense}, ``{Unmanned Aircraft Systems Roadmap
+  2005--2030},'' 2005.
+
+\bibitem{Arjomandi}
+M.~Arjomandi, {\em {Classification of Unmanned Aerial Vehicles}}.
+\newblock The University of Adelaide.
+
+\bibitem{Crocker_2007}
+D.~Crocker, {\em {Dictionary of Aviation}}.
+\newblock A\&C Black Publishers Ltd, second~ed., March 2007.
+
+\bibitem{AscTec}
+AscTec, ``{Manufacturer and Innovator of Aerial Imaging and Research
+  UAVs---Ascending Technologies}.'' [online] Available at:
+  \url{http://www.asctec.de/}.
+
+\bibitem{Draganfly}
+Draganfly, ``{Draganfly.com Industrial Aerial Video Systems \& UAVs}.''
+  [online] Available at: \url{http://www.draganfly.com/}.
+
+\bibitem{Parrot}
+Parrot, ``{Parrot USA}.'' [online] Available at: \url{http://www.parrot.com/}.
+
+\bibitem{Nehme_2006}
+C.~E. Nehme, M.~Cummings, and J.~W. Crandall, {\em {A UAV Mission Hierarchy}}.
+\newblock Massachusetts Institute of Technology, 2006.
+
+\bibitem{Hou_2006}
+M.~Hou and R.~D. Kobierski, ``{Intelligent Adaptive Interfaces},'' tech. rep.,
+  Defence Research and Development Canada, December 2006.
+
+\bibitem{Hou_2011}
+M.~Hou, H.~Zhu, M.~Zhou, and G.~G. Arrabito, ``{Optimizing Operator---Agent
+  Interaction in Intelligent Adaptive Interface Design: A Conceptual
+  Framework},'' {\em Systems, Man, and Cybernetics, Part C: Applications and
+  Reviews, IEEE Transactions on}, vol.~41, pp.~161--178, March 2011.
+
+\bibitem{Sirin_2007}
+E.~Sirin, B.~Parsia, B.~C. Grau, A.~Kalyanpur, and Y.~Katz, ``{Pellet: A
+  practical OWL-DL Reasoner},'' {\em Journal of Web Semantics}, vol.~5,
+  pp.~51--53, June 2007.
+
+\bibitem{SWI_Prolog}
+``{SWI-Prolog's home}.'' [online] Available at:
+  \url{http://www.swi-prolog.org/}.
+
+\bibitem{Bao_2006}
+J.~Bao and V.~Honavar, ``{Adapt OWL as a Modular Ontology Language},'' in {\em
+  Proceedings of the OWLED*06 Workshop on OWL: Experiences and Directions},
+  CEUR-WS.org, 2006.
+
+\bibitem{Staab_2009}
+S.~Staab and R.~Studer, {\em {Handbook on Ontologies}}.
+\newblock Springer, second~ed., 2009.
+
+\bibitem{Bechhofer_2004}
+S.~Bechhofer, F.~van Harmelen, J.~Hendler, I.~Horrocks, D.~L. McGuinness, P.~F.
+  Patel-Schneider, and L.~A. Stein, ``{OWL Web Ontology Language Reference}.''
+  [online] Available at: \url{http://www.w3.org/TR/owl-ref/}, February 2004.
+
+\bibitem{Horridge_2006}
+M.~Horridge, N.~Drummond, J.~Goodwin, A.~L. Rector, R.~Stevens, and H.~Wang,
+  ``{The Manchester OWL Syntax},'' in {\em Proceedings of the OWLED*06 Workshop
+  on OWL: Experiences and Directions}, CEUR-WS.org, 2006.
+
+\bibitem{Horridge_2011}
+M.~Horridge, {\em {A Practical Guide to Building OWL Ontologies Using
+  Prot{\'e}g{\'e} 4 and CO-ODE Tools}}.
+\newblock The University of Manchester, 1.3~ed., 2011.
+
+\bibitem{DoD_2001}
+{Joint Technical Coordinating Group on Aircraft Survivability (JTCG/AS)},
+  ``{JTCG/AS Aerospace Systems Survivability Handbook Series},'' {Volume 1.
+  Handbook Overview}, United States Department of Defense, May 2001.
+
+\bibitem{Cassidy_2002}
+M.~J. Cassidy, S.~B. Anani, and J.~M. Haigwood, ``{Study of Freeway Traffic
+  Near an Off-Ramp},'' {\em Transportation Research Part A: Policy and
+  Practice}, vol.~36, no.~6, pp.~563--572, 2002.
+
+\bibitem{Piracha_2010}
+M.~U. Piracha, D.~Nguyen, D.~Mandridis, T.~Yilmaz, I.~Ozdur, S.~Ozharar, and
+  P.~J. Delfyett, ``{Range Resolved LIDAR for Long Distance Ranging With
+  Sub-Millimeter Resolution},'' {\em Optics Express}, vol.~18, pp.~7184--7189,
+  March 2010.
+
+\bibitem{Sensoy_2012}
+M.~\c{S}ensoy, W.~W. Vasconcelos, T.~J. Norman, and K.~Sycara, ``{Reasoning
+  Support for Flexible Task Resourcing},'' {\em Expert Systems With
+  Applications}, vol.~39, pp.~1998--2010, February 2012.
+
+\bibitem{De_Mel_2013}
+G.~de~Mel, M.~\c{S}ensoy, W.~Vasconcelos, and T.~J. Norman, ``{A Hybrid
+  Reasoning Mechanism for Effective Sensor Selection for Tasks},'' {\em
+  Engineering Applications of Artificial Intelligence}, vol.~26, pp.~873--887,
+  February 2013.
+
+\bibitem{Obrst_2010}
+L.~Obrst, S.~Stoutenburg, D.~McCandless, D.~Nichols, P.~Franklin, M.~Prausa,
+  and R.~Sward, ``{Ontologies for Rapid Integration of Heterogeneous Data for
+  Command, Control, \& Intelligence},'' in {\em Proceedings of the 2010
+  Conference on Ontologies and Semantic Technologies for Intelligence},
+  pp.~71--89, IOS Press, 2010.
+
+\bibitem{Zombori_2008}
+Z.~Zombori, ``{Efficient Two-Phase Data Reasoning for Description Logics},'' in
+  {\em Artificial Intelligence in Theory and Practice II}, vol.~276 of {\em
+  IFIP '08}, pp.~393--402, Springer US, 2008.
+
+\bibitem{Lukacsy_2008}
+G.~Luk{\'a}csy, P.~Szeredi, and B.~K{\'a}d{\'a}r, ``{Prolog Based Description
+  Logic Reasoning},'' in {\em Proceedings of the 24th International Conference
+  on Logic Programming}, ICLP '08, pp.~455--469, Springer-Verlag, 2008.
+
+\bibitem{Lukacsy_2009b}
+G.~Luk{\'a}csy and P.~S. and, ``{Scalable Web Reasoning Using Logic Programming
+  Techniques},'' in {\em Proceedings of the 3rd International Conference on Web
+  Reasoning and Rule Systems}, RR '09, pp.~102--117, Springer-Verlag, 2009.
+
+\bibitem{Preece_2008}
+A.~Preece, M.~Gomez, G.~de~Mel, W.~Vasconcelos, D.~Sleeman, S.~Colley,
+  G.~Pearson, T.~Pham, and T.~L. Porta, ``{Matching Sensors to Missions Using a
+  Knowledge-Based Approach},'' in {\em Society of Photo-Optical Instrumentation
+  Engineers (SPIE) Conference Series}, 2008.
+
+\bibitem{Ferraro_2012}
+M.~Ferraro, J.~Scanlan, H.~Fangohr, and B.~Schumann, ``{A Generic Unifying
+  Ontology for Civil Unmanned Aerial Vehicle Missions},'' in {\em 12th AIAA
+  Aviation Technology, Integration, and Operations (ATIO) Conference and 14th
+  AIAA/ISSMO Multidisciplinary Analysis and Optimization Conference}, 2012.
+
+\bibitem{Valente_2005}
+A.~Valente, D.~Holmes, and F.~C. Alvidrez, ``{Using Ontologies to Build Web
+  Service-Based Architecture for Airspace Systems},'' in {\em Proceedings of
+  the 8th International Prot{\'e}g{\'e} Conference}, 2005.
+
+\bibitem{Schlenoff_2005}
+C.~Schlenoff and E.~Messina, ``{A Robot Ontology for Urban Search and
+  Rescue},'' in {\em Proceedings of the 2005 ACM Workshop on Research in
+  Knowledge Representation for Autonomous Systems}, KRAS '05, pp.~27--34, ACM,
+  2005.
+
+\bibitem{Amigoni_2005}
+F.~Amigoni and M.~A. Neri, ``{An Application of Ontology Technologies to
+  Robotic Agents},'' in {\em Proceedings of the 2005 IEEE/WIC/ACM International
+  Conference on Intelligent Agent Technology}, pp.~751--754, IEEE Computer
+  Society, 2005.
+
+\bibitem{Chella_2002}
+A.~Chella, M.~Cossentino, R.~Pirrone, and A.~Ruisi, ``{Modeling Ontologies for
+  Robotic Environments},'' in {\em Proceedings of the 14th international
+  Conference on Software Engineering and Knowledge Engineering}, SEKE '02,
+  pp.~77--80, ACM, 2002.
+
+\bibitem{Schlenoff_2003}
+C.~Schlenoff, S.~Balakirsky, M.~Uschold, R.~Provine, and S.~Smith, ``{Using
+  Ontologies to Aid Navigation Planning in Autonomous Vehicles},'' {\em
+  Knowledge Engineering Review}, vol.~18, pp.~243--255, September 2003.
+
+\bibitem{Gavshin_2011}
+Y.~Gavshin and J.~Shumik, ``{Runtime Generation of Robot Control Code From
+  Ontology File},'' in {\em Proceedings of the Second International Conference
+  on Adaptive and Intelligent Systems}, ICAIS '11, pp.~157--167,
+  Springer-Verlag, 2011.
+
+\bibitem{Bohn_2007}
+C.~A. Bohn, ``{Heuristics for Designing the Control of a UAV Fleet With Model
+  Checking},'' in {\em Cooperative Systems} (D.~Grundel, R.~Murphey,
+  P.~Pardalos, and O.~Prokopyev, eds.), vol.~588 of {\em Lecture Notes in
+  Economics and Mathematical Systems}, pp.~21--36, Springer Berlin Heidelberg,
+  2007.
+
+\bibitem{Webster_2011}
+M.~Webster, M.~Fisher, N.~Cameron, and M.~Jump, ``{Formal Methods for the
+  Certification of Autonomous Unmanned Aircraft Systems},'' in {\em Proceedings
+  of the 30th International Conference on Computer Safety, Reliability, and
+  Security}, SAFECOMP '11, pp.~228--242, Springer-Verlag, 2011.
+
+\bibitem{Jeyaraman_2005}
+S.~Jeyaraman, A.~Tsourdos, R.~{\.Z}bikowski, and B.~A. White, ``{Formal
+  Techniques for the Modelling and Validation of a Co-Operating UAV Team That
+  Uses Dubins Set for Path Planning},'' in {\em Proceedings of the 2005
+  American Control Conference}, vol.~7, pp.~4690--4695, 2005.
+
+\bibitem{Sirigineedi_2011}
+G.~Sirigineedi, A.~Tsourdos, B.~A. White, and R.~{\.Z}bikowski, ``{Kripke
+  Modelling and Verification of Temporal Specifications of a Multiple UAV
+  System},'' {\em Annals of Mathematics and Artificial Intelligence}, vol.~63,
+  pp.~31--52, September 2011.
+
+\bibitem{Kuwata_2011}
+M.~Kuwata, ``{Kwalify User's Guide (for Ruby)}.'' [online] Available at:
+  \url{http://www.kuwata-lab.com/kwalify/ruby/users-guide.html}, 2011.
+
+\bibitem{PRISM_2010}
+``{PRISM Manual | The PRISM Language / Parallel Composition}.'' [online]
+  Available at:
+  \url{http://www.prismmodelchecker.org/manual/ThePRISMLanguage/}.
+
+\bibitem{Flanagan_2008}
+D.~Flanagan and Y.~Matsumoto, {\em {The Ruby Programming Language}}.
+\newblock O'Reilly Media, first~ed., 2008.
+
+\bibitem{Perrotta_2010}
+P.~Perrotta, {\em {Metaprogramming Ruby: Program Like the Ruby Pros}}.
+\newblock The Pragmatic Programmers, first~ed., January 2010.
+
+\bibitem{Kitchenham_1995}
+B.~Kitchenham, L.~Pickard, and S.~L. Pfleeger, ``{Case Studies for Method and
+  Tool Evaluation},'' {\em IEEE Software}, vol.~12, pp.~52--62, July 1995.
+
+\bibitem{Wright_2010}
+H.~K. Wright, M.~Kim, and D.~E. Perry, ``{Validity Concerns in Software
+  Engineering Research},'' in {\em Proceedings of the FSE/SDP Workshop on
+  Future of Software Engineering Research}, FoSER '10, pp.~411--414, ACM, 2010.
+
+\bibitem{Feldt_2010}
+R.~Feldt and A.~Magazinius, ``{Validity Threats in Empirical Software
+  Engineering Research---An Initial Survey},'' in {\em Proceedings of the 22nd
+  International Conference on Software Engineering {\&} Knowledge Engineering},
+  SEKE '10, pp.~374--379, Knowledge Systems Institute Graduate School, 2010.
+
+\bibitem{Seltman_2013}
+H.~J. Seltman, {\em {Experimental Design and Analysis}}.
+\newblock Carnegie Mellon, 2013.
+
+\bibitem{Kaner_2004}
+C.~Kaner and W.~P. Bond, ``{Software Engineering Metrics: What Do They Measure
+  and How Do We Know?},'' in {\em 10th IEEE International Software Metrics
+  Symposium}, Metrics '04, IEEE Computer Society, 2004.
+
+\bibitem{Banker_1989}
+R.~D. Banker, S.~M. Datar, and D.~Zweig, ``{Software Complexity and
+  Maintainability},'' in {\em Proceedings of the Tenth International Conference
+  on Information Systems}, ICIS '89, pp.~247--255, ACM, 1989.
+
+\bibitem{Kan_2002}
+S.~H. Kan, {\em {Metrics and Models in Software Quality Engineering}}.
+\newblock Addison-Wesley Professional, 2nd~ed., 2002.
+
+\bibitem{Combemale_2011}
+B.~Combemale, L.~Gonnord, and V.~Rusu, ``{A Generic Tool for Tracing Executions
+  Back to a DSML's Operational Semantics},'' in {\em Proceedings of the 7th
+  European Conference on Modelling Foundations and Applications}, ECMFA '11,
+  pp.~35--51, Springer-Verlag, 2011.
+
+\bibitem{Wilson_2007}
+C.~Wilson, ``{Network Centric Operations: Background and Oversight Issues for
+  Congress},'' March 2007.
+
+\bibitem{Lloyd_1994}
+J.~W. Lloyd, ``{Practical Advantages of Declarative Programming},'' in {\em
+  Proceedings of the 1994 Joint Conference on Declarative Programming},
+  GULP-PRODE '94, pp.~18--30, 1994.
+
+\bibitem{Chalin_2005}
+P.~Chalin, J.~R. Kiniry, G.~T. Leavens, and E.~Poll, ``{Beyond Assertions:
+  Advanced Specification and Verification With JML and ESC/Java2},'' in {\em
+  Proceedings of the 4th International Conference on Formal Methods for
+  Components and Objects}, FMCO '05, pp.~342--363, Springer-Verlag, 2006.
+
+\bibitem{Holmgren_2005}
+A.~Holmgren, ``{Using Annotations to Add Validity Constraints to JavaBeans
+  Properties}.'' [online] Available at:
+  \url{http://192.9.162.55/developer/technicalArticles/J2SE/constraints/annotations.html},
+  March 2005.
+
+\bibitem{Ferreira_2007}
+G.~Ferreira, E.~Loureiro, and E.~Oliveira, ``{A Java Code Annotation Approach
+  for Model Checking Software Systems},'' in {\em Proceedings of the 2007 ACM
+  Symposium on Applied Computing}, SAC '07, pp.~1536--1537, ACM, 2007.
+
+\bibitem{Veness}
+C.~Veness, ``{Calculate Distance, Bearing and More Between Latitude/Longitude
+  Points}.'' [online] Available at:
+  \url{http://www.movable-type.co.uk/scripts/latlong.html}.
+\newblock Movable Type Ltd.
+
+\end{thebibliography}

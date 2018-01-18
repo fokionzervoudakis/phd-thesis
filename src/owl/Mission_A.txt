@@ -1,0 +1,73 @@
+Ontology: Mission_A
+
+Import: complex_tactical_missions
+  Class: Hummingbird
+  Class: PhotoSurveillanceAction
+  Class: ThreatArea
+  Class: TraversePathSegmentAction
+  Class: Waypoint
+  ObjectProperty: hasAction
+  ObjectProperty: hasEndpoint
+  ObjectProperty: hasPrecondition
+  ObjectProperty: hasStartPoint
+  ObjectProperty: hasWaypoint
+
+Individual: Hummingbird1
+  Types: Hummingbird
+  Facts: hasAction TraversePathSegmentAction1,
+    hasAction TraversePathSegmentAction2
+
+Individual: Hummingbird2
+  Types: Hummingbird
+  Facts: hasAction TraversePathSegmentAction3,
+    hasAction TraversePathSegmentAction4,
+    hasAction PhotoSurveillanceAction5
+
+Individual: PhotoSurveillanceAction5
+  Types: PhotoSurveillanceAction
+  Facts: hasPrecondition TraversePathSegmentAction3
+
+Individual: ThreatArea1
+  Types: ThreatArea
+  Facts: hasWaypoint Waypoint6
+
+Individual: TraversePathSegmentAction1
+  Types: TraversePathSegmentAction
+  Facts: hasStartPoint Waypoint1,
+    hasEndpoint Waypoint2
+
+Individual: TraversePathSegmentAction2
+  Types: TraversePathSegmentAction
+  Facts: hasPrecondition TraversePathSegmentAction1,
+    hasPrecondition TraversePathSegmentAction3,
+    hasStartPoint Waypoint2,
+    hasEndpoint Waypoint3
+
+Individual: TraversePathSegmentAction3
+  Types: TraversePathSegmentAction
+  Facts: hasStartPoint Waypoint4,
+    hasEndpoint Waypoint5
+
+Individual: TraversePathSegmentAction4
+  Types: TraversePathSegmentAction
+  Facts: hasPrecondition TraversePathSegmentAction3,
+    hasStartPoint Waypoint5,
+    hasEndpoint Waypoint6
+
+Individual: Waypoint1
+  Types: Waypoint
+
+Individual: Waypoint2
+  Types: Waypoint
+
+Individual: Waypoint3
+  Types: Waypoint
+
+Individual: Waypoint4
+  Types: Waypoint
+
+Individual: Waypoint5
+  Types: Waypoint
+
+Individual: Waypoint6
+  Types: Waypoint
