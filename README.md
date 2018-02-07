@@ -7,6 +7,7 @@ To clone the repository and compile with *LaTeX*:
 ```
 git clone git@github.com:fokionzervoudakis/phd-thesis.git
 cd phd-thesis/
+chmod +x compile.sh
 ./compile.sh
 ```
 
