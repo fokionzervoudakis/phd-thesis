@@ -3,7 +3,7 @@
 set -e
 
 function new_line {
-    printf "%.0s=" {1..100}
+    printf "%.0s=" {1..79}
     printf '\n'
 }
 
